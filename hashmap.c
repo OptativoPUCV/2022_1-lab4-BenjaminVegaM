@@ -51,9 +51,11 @@ void enlarge(HashMap * map) {
 }
 
 
-HashMap * createMap(long capacity) {
-
-    return NULL;
+HashMap * createMap(long capacity)
+{
+  HashMap * newMap = (HashMap *) malloc (sizeof(HashMap));
+  newMap->buckets = (Pair **) malloc (sizeof(Pair));
+  return NULL;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
