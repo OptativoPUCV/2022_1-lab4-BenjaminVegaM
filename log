@@ -848,3 +848,9 @@ Sun, 10 Apr 2022 17:18:38:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|1
 22fcc7c
+Sun, 10 Apr 2022 17:19:04: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|1
+   [ INFO ] buscando elemento con key=carro
+964dc43
