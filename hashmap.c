@@ -92,7 +92,7 @@ Pair * searchMap(HashMap * map,  char * key)
     
     //si no se encuentra, resolucion de colisiones
 
-    while (is_equal(map->buckets[position]->key, key) == 0)
+    while (is_equal(key, map->buckets[position]->key) == 0)
     {
         if(map->buckets[position] == NULL) return NULL;
 
