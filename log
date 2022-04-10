@@ -662,3 +662,9 @@ Sat, 09 Apr 2022 20:29:34:
  tests:  0|0
    [ INFO ] se intenta insertar elemento con hash=7
 10adcd1
+Sat, 09 Apr 2022 20:31:13: 
+ hashmap.c | 22 ++--------------------
+ 1 file changed, 2 insertions(+), 20 deletions(-)
+ tests:  0|6
+total_score: 0/70
+5820569
