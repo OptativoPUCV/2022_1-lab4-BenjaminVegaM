@@ -734,3 +734,16 @@ Sun, 10 Apr 2022 16:09:18:
  tests:  2|5
 total_score: 20/70
 be351fd
+Sun, 10 Apr 2022 16:16:59: 
+ hashmap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function 'insertMap':
+hashmap.c:49:14: error: format '%s' expects argument of type 'char *', but argument 2 has type 'Pair *' [-Werror=format=]
+   49 |     printf("%s\n", map->buckets[position]);
+      |             ~^     ~~~~~~~~~~~~~~~~~~~~~~
+      |              |                 |
+      |              char *            Pair *
+cc1.exe: all warnings being treated as errors
+Compilation failed
+945255b

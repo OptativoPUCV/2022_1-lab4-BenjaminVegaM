@@ -41,10 +41,15 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value)
 {
+    //toma el hash de la key para tener la posicion
     long position = hash(key, map->capacity);
 
     int i = 0;
+    
+    printf("%s\n", map->buckets[position]);
+printf("%s", map->buckets[position]->key);
 
+    //mientras la casilla esté ocupada
     while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
     {
         if(is_equal(key, map->buckets[position]->key) == 1)
@@ -54,7 +59,10 @@ void insertMap(HashMap * map, char * key, void * value)
         i++;
     }
     
+    //inserta el nuevo dato
     map->buckets[position] = createPair(key, value);
+
+    //actualiza current a la nueva posicion
     map->current = position;
     map->size++;
 }
