@@ -48,9 +48,10 @@ void insertMap(HashMap * map, char * key, void * value)
     int i = 0;
     printf("i = %i\n", i);
     //mientras la casilla esté ocupada
-    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && position < map->capacity)
+    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
     {
         printf("i = %i\n", i);
+        printf("position = %ld\n");
         if(is_equal(key, map->buckets[position]->key) == 1)
         {
             position = position % map->capacity;

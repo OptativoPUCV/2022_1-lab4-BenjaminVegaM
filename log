@@ -830,3 +830,16 @@ Sun, 10 Apr 2022 17:17:07:
  tests:  0|0
 i = 468764
 8f84cb2
+Sun, 10 Apr 2022 17:18:15: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'insertMap':
+hashmap.c:54:30: error: format '%ld' expects a matching 'long int' argument [-Werror=format=]
+   54 |         printf("position = %ld\n");
+      |                            ~~^
+      |                              |
+      |                              long int
+cc1.exe: all warnings being treated as errors
+Compilation failed
+b04b949
