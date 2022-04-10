@@ -913,3 +913,14 @@ Sun, 10 Apr 2022 17:28:05:
  tests:  6|4
 total_score: 30/70
 61085c5
+Sun, 10 Apr 2022 17:28:51: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'searchMap':
+hashmap.c:101:18: error: assignment to 'long int' from 'Pair *' makes integer from pointer without a cast [-Werror=int-conversion]
+  101 |     map->current = map->buckets[position];
+      |                  ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+59d137d
