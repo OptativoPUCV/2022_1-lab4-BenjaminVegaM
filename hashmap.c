@@ -91,8 +91,11 @@ Pair * searchMap(HashMap * map,  char * key)
     long position = hash(key, map->capacity);
     
     //si no se encuentra, resolucion de colisiones
-    while (is_equal(key, map->buckets[position]->key))
+    while (is_equal(key, map->buckets[position]->key) == 0 
+    || map->buckets[position] == NULL)
     {
+        
+
         position = (position+1) % map->capacity;
         if(map->buckets[position] == NULL) return NULL;
     }
