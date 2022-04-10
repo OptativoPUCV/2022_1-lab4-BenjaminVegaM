@@ -42,3 +42,14 @@ Sat, 09 Apr 2022 19:57:53:
  tests:  0|6
 total_score: 0/70
 e4312f5
+Sat, 09 Apr 2022 20:06:53: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'createMap':
+hashmap.c:57:19: error: assignment to 'Pair **' from incompatible pointer type 'Pair *' [-Werror=incompatible-pointer-types]
+   57 |   newMap->buckets = createPair(NULL, NULL);
+      |                   ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f28a62c
