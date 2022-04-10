@@ -747,3 +747,16 @@ hashmap.c:49:14: error: format '%s' expects argument of type 'char *', but argum
 cc1.exe: all warnings being treated as errors
 Compilation failed
 945255b
+Sun, 10 Apr 2022 16:17:12: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'insertMap':
+hashmap.c:49:14: error: format '%i' expects argument of type 'int', but argument 2 has type 'Pair *' [-Werror=format=]
+   49 |     printf("%i\n", map->buckets[position]);
+      |             ~^     ~~~~~~~~~~~~~~~~~~~~~~
+      |              |                 |
+      |              int               Pair *
+cc1.exe: all warnings being treated as errors
+Compilation failed
+49c6f54
