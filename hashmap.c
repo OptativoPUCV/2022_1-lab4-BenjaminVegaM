@@ -100,7 +100,7 @@ Pair * searchMap(HashMap * map,  char * key)
     {
         if(map->buckets[position] == NULL) return NULL;
 
-        position = position % map->capacity;
+        position = (position+1) % map->capacity;
     }
     
     return map->buckets[position];
