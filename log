@@ -819,3 +819,14 @@ hashmap.c:26:19: note: expected 'char *' but argument is of type 'long int'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 8edd3c1
+Sun, 10 Apr 2022 17:16:14: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  2|0
+8f84cb2
+Sun, 10 Apr 2022 17:17:07: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+i = 468764
+8f84cb2

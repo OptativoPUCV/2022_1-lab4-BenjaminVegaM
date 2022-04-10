@@ -25,7 +25,7 @@ Pair * createPair( char * key,  void * value) {
 
 long hash( char * key, long capacity) {
     unsigned long hash = 0;
-     char * ptr;
+    char * ptr;
     for (ptr = key; *ptr != '\0'; ptr++) {
         hash += hash*32 + tolower(*ptr);
     }
@@ -48,12 +48,12 @@ void insertMap(HashMap * map, char * key, void * value)
     int i = 0;
     printf("i = %i\n", i);
     //mientras la casilla esté ocupada
-    while(map->buckets[position] != 0 && map->buckets[position]->key != 0 && position < map->capacity)
+    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && position < map->capacity)
     {
         printf("i = %i\n", i);
         if(is_equal(key, map->buckets[position]->key) == 1)
         {
-            position = hash(position, map->capacity);
+            position = position % map->capacity;
         }
         i++;
     }
@@ -99,7 +99,7 @@ Pair * searchMap(HashMap * map,  char * key)
     {
         if(map->buckets[position] == NULL) return NULL;
 
-        position = hash(position, map->capacity);
+        position = position % map->capacity;
     }
     
     return map->buckets[position];
