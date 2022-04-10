@@ -260,3 +260,162 @@ test.c:439:71: error: invalid type argument of '->' (have 'Pair')
 cc1.exe: all warnings being treated as errors
 Compilation failed
 224668c
+Sat, 09 Apr 2022 20:12:30: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+test.c: In function 'initializeMap':
+test.c:44:18: error: assignment to 'Pair *' from incompatible pointer type 'Pair **' [-Werror=incompatible-pointer-types]
+   44 |     map->buckets = (Pair **) calloc (10,sizeof(Pair *));
+      |                  ^
+test.c:53:9: error: incompatible types when assigning to type 'Pair' from type 'Pair *'
+   53 |         createPair(_strdup(words[i]),_strdup(msg));
+      |         ^~~~~~~~~~
+test.c: In function 'createMap_test2':
+test.c:79:25: error: invalid operands to binary != (have 'Pair' and 'void *')
+   79 |       if(map->buckets[i]!=NULL) {err_msg("bucket no nulo"); return 0;}
+      |          ~~~~~~~~~~~~~~~^~
+      |                      |
+      |                      Pair
+test.c: In function 'insert_test1':
+test.c:143:24: error: invalid operands to binary == (have 'Pair' and 'void *')
+  143 |     if(map->buckets[3] == NULL){
+      |        ~~~~~~~~~~~~~~~ ^~
+      |                    |
+      |                    Pair
+test.c:148:32: error: invalid type argument of '->' (have 'Pair')
+  148 |     if( strcmp (map->buckets[3]->key, ":key")!=0 ||
+      |                                ^~
+test.c:149:37: error: invalid type argument of '->' (have 'Pair')
+  149 |              strcmp (map->buckets[3]->value, "value")!=0 ){
+      |                                     ^~
+test.c: In function 'insert_test2':
+test.c:172:24: error: invalid operands to binary != (have 'Pair' and 'void *')
+  172 |     if(map->buckets[1] != NULL){
+      |        ~~~~~~~~~~~~~~~ ^~
+      |                    |
+      |                    Pair
+test.c: In function 'insert_test3':
+test.c:183:23: error: invalid operands to binary == (have 'Pair' and 'void *')
+  183 |     if(map->buckets[9]==NULL || !is_equal(map->buckets[9]->value,"value") ){
+      |        ~~~~~~~~~~~~~~~^~
+      |                    |
+      |                    Pair
+test.c:183:58: error: invalid type argument of '->' (have 'Pair')
+  183 |     if(map->buckets[9]==NULL || !is_equal(map->buckets[9]->value,"value") ){
+      |                                                          ^~
+test.c: In function 'insert_test4':
+test.c:196:23: error: invalid operands to binary == (have 'Pair' and 'void *')
+  196 |     if(map->buckets[9]==NULL || !is_equal(map->buckets[9]->value,"value") ){
+      |        ~~~~~~~~~~~~~~~^~
+      |                    |
+      |                    Pair
+test.c:196:58: error: invalid type argument of '->' (have 'Pair')
+  196 |     if(map->buckets[9]==NULL || !is_equal(map->buckets[9]->value,"value") ){
+      |                                                          ^~
+test.c:206:23: error: invalid operands to binary == (have 'Pair' and 'void *')
+  206 |     if(map->buckets[1]==NULL || !is_equal(map->buckets[1]->value,"value") ){
+      |        ~~~~~~~~~~~~~~~^~
+      |                    |
+      |                    Pair
+test.c:206:58: error: invalid type argument of '->' (have 'Pair')
+  206 |     if(map->buckets[1]==NULL || !is_equal(map->buckets[1]->value,"value") ){
+      |                                                          ^~
+test.c: In function 'search_test1':
+test.c:242:12: error: invalid operands to binary != (have 'void *' and 'Pair')
+  242 |     if(ret != map->buckets[7]) {
+      |            ^~ ~~~~~~~~~~~~~~~
+      |                           |
+      |                           Pair
+test.c: In function 'search_test2':
+test.c:259:21: error: incompatible types when assigning to type 'Pair' from type 'Pair *'
+  259 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                     ^~~~~~~~~~
+test.c:268:12: error: invalid operands to binary != (have 'Pair *' and 'Pair')
+  268 |     if(ret != map->buckets[9]) {
+      |            ^~ ~~~~~~~~~~~~~~~
+      |                           |
+      |                           Pair
+test.c: In function 'search_test3':
+test.c:280:93: error: invalid type argument of '->' (have 'Pair')
+  280 |         sprintf(msg,"searchMap retorna un elemento con clave %s", map->buckets[map->current]->key);
+      |                                                                                             ^~
+test.c: In function 'erase_test1':
+test.c:294:23: error: invalid operands to binary == (have 'Pair' and 'void *')
+  294 |     if(map->buckets[0]==NULL){
+      |        ~~~~~~~~~~~~~~~^~
+      |                    |
+      |                    Pair
+test.c:299:23: error: invalid type argument of '->' (have 'Pair')
+  299 |     if(map->buckets[0]->key !=NULL) {
+      |                       ^~
+test.c: In function 'erase_test2':
+test.c:317:21: error: incompatible types when assigning to type 'Pair' from type 'Pair *'
+  317 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                     ^~~~~~~~~~
+test.c:322:23: error: invalid type argument of '->' (have 'Pair')
+  322 |     if(map->buckets[9]->key!=NULL){
+      |                       ^~
+test.c: In function 'erase_test3':
+test.c:335:23: error: invalid type argument of '->' (have 'Pair')
+  335 |     if(map->buckets[2]->key==NULL){
+      |                       ^~
+test.c: In function 'first_test':
+test.c:355:12: error: invalid operands to binary != (have 'Pair *' and 'Pair')
+  355 |     if(aux != map->buckets[0]){
+      |            ^~ ~~~~~~~~~~~~~~~
+      |                           |
+      |                           Pair
+test.c:368:20: error: invalid type argument of '->' (have 'Pair')
+  368 |     map->buckets[0]->key=NULL;
+      |                    ^~
+test.c:373:12: error: invalid operands to binary != (have 'Pair *' and 'Pair')
+  373 |     if(aux != map->buckets[2]){
+      |            ^~ ~~~~~~~~~~~~~~~
+      |                           |
+      |                           Pair
+test.c: In function 'next_test':
+test.c:394:20: error: invalid operands to binary != (have 'Pair *' and 'Pair')
+  394 |     if(nextMap(map)!=map->buckets[2]){
+      |        ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+      |        |                         |
+      |        Pair *                    Pair
+test.c:407:20: error: invalid operands to binary != (have 'Pair *' and 'Pair')
+  407 |     if(nextMap(map)!=map->buckets[8]){
+      |        ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+      |        |                         |
+      |        Pair *                    Pair
+test.c: In function 'enlarge_test':
+test.c:429:35: error: invalid type argument of '->' (have 'Pair')
+  429 |     void* value3 = map->buckets[0]->value;
+      |                                   ^~
+test.c:430:35: error: invalid type argument of '->' (have 'Pair')
+  430 |     void* value5 = map->buckets[2]->value;
+      |                                   ^~
+test.c:431:35: error: invalid type argument of '->' (have 'Pair')
+  431 |     void* value4 = map->buckets[4]->value;
+      |                                   ^~
+test.c:435:23: error: invalid type argument of '->' (have 'Pair')
+  435 |     if(map->buckets[0]->value!=value3 || map->buckets[2]!=NULL || map->buckets[12]->value != value5 || map->buckets[4]->value!=value4){
+      |                       ^~
+test.c:435:57: error: invalid operands to binary != (have 'Pair' and 'void *')
+  435 |     if(map->buckets[0]->value!=value3 || map->buckets[2]!=NULL || map->buckets[12]->value != value5 || map->buckets[4]->value!=value4){
+      |                                          ~~~~~~~~~~~~~~~^~
+      |                                                      |
+      |                                                      Pair
+test.c:435:83: error: invalid type argument of '->' (have 'Pair')
+  435 |     if(map->buckets[0]->value!=value3 || map->buckets[2]!=NULL || map->buckets[12]->value != value5 || map->buckets[4]->value!=value4){
+      |                                                                                   ^~
+test.c:435:119: error: invalid type argument of '->' (have 'Pair')
+  435 |     if(map->buckets[0]->value!=value3 || map->buckets[2]!=NULL || map->buckets[12]->value != value5 || map->buckets[4]->value!=value4){
+      |                                                                                                                       ^~
+test.c:438:31: error: invalid operands to binary == (have 'Pair' and 'void *')
+  438 |             if(map->buckets[i]==NULL) sprintf(msg,"%.100s(null)  ",msg);
+      |                ~~~~~~~~~~~~~~~^~
+      |                            |
+      |                            Pair
+test.c:439:71: error: invalid type argument of '->' (have 'Pair')
+  439 |             else sprintf(msg,"%.100s%s  ", msg, (char*)map->buckets[i]->value);
+      |                                                                       ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d0d784e
