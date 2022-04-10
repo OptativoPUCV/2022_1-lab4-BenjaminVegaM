@@ -1044,3 +1044,9 @@ hashmap.c:137:26: error: assignment to 'long int' from 'Pair *' makes integer fr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 3b15906
+Sun, 10 Apr 2022 18:44:09: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|2
+total_score: 50/70
+6c2b0d9
