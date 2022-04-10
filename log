@@ -419,3 +419,9 @@ test.c:439:71: error: invalid type argument of '->' (have 'Pair')
 cc1.exe: all warnings being treated as errors
 Compilation failed
 d0d784e
+Sat, 09 Apr 2022 20:12:51: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  0|6
+total_score: 0/70
+e420420

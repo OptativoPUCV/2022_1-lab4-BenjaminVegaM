@@ -10,7 +10,7 @@ typedef struct HashMap HashMap;
 int enlarge_called=0;
 
 struct HashMap {
-    Pair * buckets;
+    Pair ** buckets;
     long size; //cantidad de datos/pairs en la tabla
     long capacity; //capacidad de la tabla
     long current; //indice del ultimo dato accedido
@@ -54,7 +54,8 @@ void enlarge(HashMap * map) {
 HashMap * createMap(long capacity)
 {
   HashMap * newMap = (HashMap *) malloc (sizeof(HashMap));
-  return newMap;
+  newMap->buckets = (Pair **) malloc (sizeof(Pair));
+  return NULL;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
