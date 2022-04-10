@@ -41,17 +41,19 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value)
 {
+    printf("InsertMap\n");
     //toma el hash de la key para tener la posicion
     long position = hash(key, map->capacity);
 
     int i = 0;
-
+    printf("i = %i\n", i);
     //mientras la casilla esté ocupada
-    while(map->buckets[position] != 0 && map->buckets[position]->key != 0 && i < map->capacity)
+    while(map->buckets[position] != 0 && map->buckets[position]->key != 0 && position < map->capacity)
     {
+        printf("i = %i\n", i);
         if(is_equal(key, map->buckets[position]->key) == 1)
         {
-            position = (position+1) % map->capacity;
+            position = hash(position, map->capacity);
         }
         i++;
     }
@@ -86,10 +88,21 @@ void eraseMap(HashMap * map,  char * key)
 
 }
 
-Pair * searchMap(HashMap * map,  char * key) {   
+Pair * searchMap(HashMap * map,  char * key)
+{
+    //sacar posicion
+    long position = hash(key, map->capacity);
+    
+    //si no se encuentra, resolucion de colisiones
 
+    while (map->buckets[position]->key != key && position < map->capacity)
+    {
+        if(map->buckets[position] == NULL) return NULL;
 
-    return NULL;
+        position = hash(position, map->capacity);
+    }
+    
+    return map->buckets[position];
 }
 
 Pair * firstMap(HashMap * map) {

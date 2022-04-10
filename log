@@ -789,3 +789,33 @@ Sun, 10 Apr 2022 16:23:08:
  tests:  2|5
 total_score: 20/70
 4c5e96b
+Sun, 10 Apr 2022 16:23:44: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  2|0
+8edd3c1
+Sun, 10 Apr 2022 17:15:40: 
+ hashmap.c | 27 ++++++++++++++++++++-------
+ 1 file changed, 20 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function 'insertMap':
+hashmap.c:56:29: error: passing argument 1 of 'hash' makes pointer from integer without a cast [-Werror=int-conversion]
+   56 |             position = hash(position, map->capacity);
+      |                             ^~~~~~~~
+      |                             |
+      |                             long int
+hashmap.c:26:19: note: expected 'char *' but argument is of type 'long int'
+   26 | long hash( char * key, long capacity) {
+      |            ~~~~~~~^~~
+hashmap.c: In function 'searchMap':
+hashmap.c:102:25: error: passing argument 1 of 'hash' makes pointer from integer without a cast [-Werror=int-conversion]
+  102 |         position = hash(position, map->capacity);
+      |                         ^~~~~~~~
+      |                         |
+      |                         long int
+hashmap.c:26:19: note: expected 'char *' but argument is of type 'long int'
+   26 | long hash( char * key, long capacity) {
+      |            ~~~~~~~^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8edd3c1
