@@ -843,3 +843,8 @@ hashmap.c:54:30: error: format '%ld' expects a matching 'long int' argument [-We
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b04b949
+Sun, 10 Apr 2022 17:18:38: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|1
+22fcc7c

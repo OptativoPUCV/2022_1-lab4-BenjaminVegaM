@@ -51,7 +51,7 @@ void insertMap(HashMap * map, char * key, void * value)
     while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
     {
         printf("i = %i\n", i);
-        printf("position = %ld\n");
+        printf("position = %ld\n", position);
         if(is_equal(key, map->buckets[position]->key) == 1)
         {
             position = position % map->capacity;
