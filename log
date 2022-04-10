@@ -723,3 +723,8 @@ Sun, 10 Apr 2022 16:08:10:
  tests:  2|0
    [ INFO ] se intenta insertar elemento con hash=7
 40f7799
+Sun, 10 Apr 2022 16:08:39: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|0
+3e5677a
