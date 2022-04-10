@@ -45,10 +45,9 @@ void insertMap(HashMap * map, char * key, void * value)
     long position = hash(key, map->capacity);
 
     int i = 0;
-    printf("Test map buckets position key ===> %s", map->buckets[position]->key);
 
     //mientras la casilla esté ocupada
-    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
+    while(map->buckets[position] != 0 && map->buckets[position]->key != 0 && i < map->capacity)
     {
         if(is_equal(key, map->buckets[position]->key) == 1)
         {
