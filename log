@@ -650,3 +650,9 @@ C:/msys64/mingw64/x86_64-w64-mingw32/include/stdlib.h:537:17: note: declared her
       |                 ^~~~~~
 Compilation failed
 43a6918
+Sat, 09 Apr 2022 20:28:10: 
+ hashmap.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+ tests:  0|6
+total_score: 0/70
+74360a6
