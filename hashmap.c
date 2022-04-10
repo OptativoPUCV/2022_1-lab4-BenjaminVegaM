@@ -44,14 +44,19 @@ void insertMap(HashMap * map, char * key, void * value)
     printf("InsertMap\n");
     //toma el hash de la key para tener la posicion
     long position = hash(key, map->capacity);
-    
+
+//    int i = 0;
+//    printf("i = %i\n", i);
     //mientras la casilla esté ocupada
-    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL)
+    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
     {
+//        printf("i = %i\n", i);
+        printf("position = %ld\n", position);
         if(is_equal(key, map->buckets[position]->key) == 0)
         {
             position = (position+1) % map->capacity;
         }
+//        i++;
     }
     
     //inserta el nuevo dato

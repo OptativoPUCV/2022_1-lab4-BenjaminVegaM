@@ -880,3 +880,14 @@ Sun, 10 Apr 2022 17:23:24:
  1 file changed, 1 insertion(+), 6 deletions(-)
  tests:  2|0
 d5c231d
+Sun, 10 Apr 2022 17:24:36: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'insertMap':
+hashmap.c:51:84: error: 'i' undeclared (first use in this function)
+   51 |     while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
+      |                                                                                    ^
+hashmap.c:51:84: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+b89b2be
