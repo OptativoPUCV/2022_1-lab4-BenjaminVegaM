@@ -636,3 +636,17 @@ Sat, 09 Apr 2022 20:24:03:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 8cb3b22
+Sat, 09 Apr 2022 20:27:18: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function 'createMap':
+hashmap.c:57:31: error: too many arguments to function 'malloc'
+   57 |   newMap->buckets = (Pair **) malloc (capacity, sizeof(Pair *));
+      |                               ^~~~~~
+In file included from test.c:2:
+C:/msys64/mingw64/x86_64-w64-mingw32/include/stdlib.h:537:17: note: declared here
+  537 |   void *__cdecl malloc(size_t _Size);
+      |                 ^~~~~~
+Compilation failed
+43a6918
