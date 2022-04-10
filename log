@@ -891,3 +891,13 @@ hashmap.c:51:84: error: 'i' undeclared (first use in this function)
 hashmap.c:51:84: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 b89b2be
+Sun, 10 Apr 2022 17:24:54: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+po5c7a7a0
+Sun, 10 Apr 2022 17:25:16: 
+ hashmap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+ tests:  0|0
+5c7a7a0
