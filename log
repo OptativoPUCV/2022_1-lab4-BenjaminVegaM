@@ -1033,3 +1033,14 @@ hashmap.c:137:26: error: assignment to 'long int' from 'Pair *' makes integer fr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c710c68
+Sun, 10 Apr 2022 18:43:53: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'firstMap':
+hashmap.c:137:26: error: assignment to 'long int' from 'Pair *' makes integer from pointer without a cast [-Werror=int-conversion]
+  137 |             map->current = map->buckets[0];
+      |                          ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3b15906
