@@ -773,3 +773,8 @@ hashmap.c:49:15: error: format '%lu' expects argument of type 'long unsigned int
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c18d50c
+Sun, 10 Apr 2022 16:19:35: 
+ hashmap.c | 2 --
+ 1 file changed, 2 deletions(-)
+ tests:  0|0
+206e1f3

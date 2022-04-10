@@ -45,9 +45,7 @@ void insertMap(HashMap * map, char * key, void * value)
     long position = hash(key, map->capacity);
 
     int i = 0;
-    
-    printf("%lu\n", map->buckets[position]);
-printf("%s", map->buckets[position]->key);
+    printf("%s", map->buckets[position]->key);
 
     //mientras la casilla esté ocupada
     while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
