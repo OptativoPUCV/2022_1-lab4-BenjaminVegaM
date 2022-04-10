@@ -75,3 +75,29 @@ Sat, 09 Apr 2022 20:07:23:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 548aab3
+Sat, 09 Apr 2022 20:10:54: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function 'createPair':
+hashmap.c:20:18: error: initialization of 'Pair *' from incompatible pointer type 'Pair **' [-Werror=incompatible-pointer-types]
+   20 |     Pair * new = (Pair **)malloc(sizeof(Pair));
+      |                  ^
+hashmap.c:23:12: error: returning 'Pair *' from a function with incompatible return type 'Pair **' [-Werror=incompatible-pointer-types]
+   23 |     return new;
+      |            ^~~
+test.c: In function 'initializeMap':
+test.c:52:32: error: assignment to 'Pair *' from incompatible pointer type 'Pair **' [-Werror=incompatible-pointer-types]
+   52 |         map->buckets[hashs[i]] =
+      |                                ^
+test.c: In function 'search_test2':
+test.c:259:20: error: assignment to 'Pair *' from incompatible pointer type 'Pair **' [-Werror=incompatible-pointer-types]
+  259 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                    ^
+test.c: In function 'erase_test2':
+test.c:317:20: error: assignment to 'Pair *' from incompatible pointer type 'Pair **' [-Werror=incompatible-pointer-types]
+  317 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                    ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+80e73f6

@@ -16,8 +16,8 @@ struct HashMap {
     long current; //indice del ultimo dato accedido
 };
 
-Pair * createPair( char * key,  void * value) {
-    Pair * new = (Pair *)malloc(sizeof(Pair));
+Pair ** createPair( char * key,  void * value) {
+    Pair * new = (Pair **)malloc(sizeof(Pair));
     new->key = key;
     new->value = value;
     return new;
@@ -54,7 +54,7 @@ void enlarge(HashMap * map) {
 HashMap * createMap(long capacity)
 {
   HashMap * newMap = (HashMap *) malloc (sizeof(HashMap));
-  newMap->buckets = 0;
+  newMap->buckets = createPair(NULL, NULL);
   return newMap;
 }
 
