@@ -52,7 +52,7 @@ void insertMap(HashMap * map, char * key, void * value)
     {
         printf("i = %i\n", i);
         printf("position = %ld\n", position);
-        if(is_equal(key, map->buckets[position]->key) == 1)
+        if(is_equal(key, map->buckets[position]->key) == 0)
         {
             position++;
         }
