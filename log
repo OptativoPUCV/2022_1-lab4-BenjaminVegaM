@@ -1125,3 +1125,20 @@ C:/msys64/mingw64/x86_64-w64-mingw32/include/stdlib.h:538:31: note: expected 'vo
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b6a8ec3
+Sun, 10 Apr 2022 21:40:42: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'enlarge':
+hashmap.c:69:39: error: passing argument 1 of 'realloc' makes pointer from integer without a cast [-Werror=int-conversion]
+   69 |     map->buckets = (Pair **) realloc (capacity, sizeof(Pair));
+      |                                       ^~~~~~~~
+      |                                       |
+      |                                       long int
+In file included from test.c:2:
+C:/msys64/mingw64/x86_64-w64-mingw32/include/stdlib.h:538:31: note: expected 'void *' but argument is of type 'long int'
+  538 |   void *__cdecl realloc(void *_Memory,size_t _NewSize);
+      |                         ~~~~~~^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+9cb7ab2
