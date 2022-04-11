@@ -1154,3 +1154,14 @@ Sun, 10 Apr 2022 21:47:11:
  tests:  16|1
 total_score: 60/70
 cbf5e3a
+Sun, 10 Apr 2022 22:52:36: 
+ hashmap.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function 'enlarge':
+hashmap.c:76:21: error: assignment to 'Pair **' from incompatible pointer type 'Pair *' [-Werror=incompatible-pointer-types]
+   76 |     auxMap->buckets = firstMap(auxMap);
+      |                     ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3637fb4
