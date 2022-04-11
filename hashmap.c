@@ -43,16 +43,17 @@ void insertMap(HashMap * map, char * key, void * value)
 {
     //toma el hash de la key para tener la posicion
     long position = hash(key, map->capacity);
-
-    int i = 0;
     //mientras la casilla esté ocupada
-    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL && i < map->capacity)
+    while(map->buckets[position] != NULL && map->buckets[position]->key != NULL )
     {
-        if(is_equal(key, map->buckets[position]->key) == 0)
+        if(!is_equal(key, map->buckets[position]->key))
         {
             position = (position+1) % map->capacity;
         }
-        i++;
+        else
+        {
+            break;
+        }
     }
     
     //inserta el nuevo dato
@@ -64,7 +65,7 @@ void insertMap(HashMap * map, char * key, void * value)
 }
 
 void enlarge(HashMap * map) {
-    /*enlarge_called = 1; //no borrar (testing purposes)
+    enlarge_called = 1; //no borrar (testing purposes)
 
     Pair ** auxBuckets = (Pair **) calloc (map->capacity, sizeof(Pair));
 
@@ -79,18 +80,18 @@ void enlarge(HashMap * map) {
         {
             insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
         }
-    }*/
+    }
 }
 
 
 HashMap * createMap(long capacity)
 {
-  HashMap * newMap = (HashMap *) malloc (sizeof(HashMap));
-  newMap->buckets = (Pair **) calloc (capacity, sizeof(Pair));
-  newMap->capacity = capacity;
-  newMap->size = 0;
-  newMap->current = -1;
-  return newMap;
+    HashMap * newMap = (HashMap *) malloc (sizeof(HashMap));
+    newMap->buckets = (Pair **) calloc (capacity, sizeof(Pair));
+    newMap->capacity = capacity;
+    newMap->size = 0;
+    newMap->current = -1;
+    return newMap;
 }
 
 void eraseMap(HashMap * map,  char * key)
